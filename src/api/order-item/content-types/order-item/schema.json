@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_items",
+  "info": {
+    "singularName": "order-item",
+    "pluralName": "order-items",
+    "displayName": "Order Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "grocery": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::grocery.grocery"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "total": {
+      "type": "integer"
+    }
+  }
+}

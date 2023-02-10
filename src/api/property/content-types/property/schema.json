@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "singularName": "property",
+    "pluralName": "properties",
+    "displayName": "Property",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "default": "Nairobi, Kenya"
+    },
+    "rate": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "features": {
+      "type": "json"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rate_computation_period": {
+      "type": "string",
+      "required": true,
+      "default": "monthly"
+    },
+    "category": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "property"
+    },
+    "contact_phone": {
+      "type": "string",
+      "default": "\"\"",
+      "required": false
+    },
+    "contact_email": {
+      "type": "email",
+      "required": true,
+      "default": "contact@example.com"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "private": true,
+      "inversedBy": "properties"
+    },
+    "type": {
+      "type": "string",
+      "default": "rent",
+      "required": true
+    }
+  }
+}
