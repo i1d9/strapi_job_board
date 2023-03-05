@@ -63,26 +63,8 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "bookings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::booking.booking",
-      "mappedBy": "user"
-    },
-    "properties": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::property.property",
-      "mappedBy": "owner"
-    },
     "phone_number": {
       "type": "string"
-    },
-    "orders": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order.order",
-      "mappedBy": "owner"
     },
     "applications": {
       "type": "relation",
