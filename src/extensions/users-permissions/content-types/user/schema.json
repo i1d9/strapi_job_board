@@ -96,12 +96,6 @@
     "last_name": {
       "type": "string"
     },
-    "messages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::message.message",
-      "mappedBy": "receiver"
-    },
     "profile": {
       "type": "media",
       "multiple": false,

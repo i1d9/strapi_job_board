@@ -23,7 +23,7 @@ module.exports = createCoreController('api::job.job', ({ strapi }) => ({
                             populate: {
                                 cv: true,
                                 applicant: {
-                                    select: ['first_name', 'last_name', 'phone_number', 'email', 'id']
+                                    select: ['username', 'first_name', 'last_name', 'phone_number', 'email', 'id']
                                 }
                             }
                         }
